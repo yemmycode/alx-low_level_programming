@@ -11,7 +11,7 @@ int main(void)
 
 	lowerCase = 'a';
 	while
-	       	(lowerCase <= 'z') {
+		(lowerCase <= 'z') {
 			putchar(lowerCase);
 			lowerCase++;
 		}
