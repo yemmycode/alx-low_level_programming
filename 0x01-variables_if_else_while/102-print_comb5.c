@@ -16,10 +16,10 @@ int main(void)
 		{
 			if (i < a && i != a)
 			{
-				putchar((i /10) + '0');
+				putchar((i / 10) + '0');
 				putchar((i % 10) + '0');
 				putchar(' ');
-				putchar((a /10) + '0');
+				putchar((a / 10) + '0');
 				putchar((a % 10) + '0');
 				if (i != 98 || a != 99)
 				{
