@@ -8,13 +8,12 @@
 
 int main(void)
 {
-        int i, w = 0;
-
-        while (i < 1024)
+    int i, w = 0;
+    while (i < 1024)
         {
-                if ((i % 3 == 0) || (i % 5 == 0))
+            if ((i % 3 == 0) || (i % 5 == 0))
                 {
-                        w += i;
+                    w += i;
                 }
                 i++;
         }
