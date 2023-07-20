@@ -10,7 +10,6 @@ int main(void)
 {
         int i = 0;
         long f = 1, g = 2;
-	
 	while (i < 50)
 	{
 		if (i == 0)
