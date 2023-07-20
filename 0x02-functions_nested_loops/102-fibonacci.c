@@ -5,25 +5,28 @@
  *
  * Return: 0
  */
-int main() {
-    int a = 1;
-    int b = 2;
-    int fibonacci;
 
-    printf("%d, %d", a, b);
+int main(void)
+{
+	int i = 0;
+	long f = 1, g = 2;
 
-    int i = 2;
-    while (i < 50) {
-        fibonacci = a + b;
-        printf(", %d", fibonacci);
-        a = b;
-        b = fibonacci;
-        i++;
-    }
-
-    printf("\n");
-
-    return 0;
+	while (i < 50)
+	{
+		if (i == 0)
+			printf("%ld", f);
+		else if (i == 1)
+			printf(", %ld", g);
+		else
+		{
+			g += f;
+			f = g - f;
+			printf(", %ld", g);
+		}
+		++i;
+	}
+	printf("\n");
+	return (0);
 }
 
  
