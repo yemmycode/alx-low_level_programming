@@ -8,16 +8,19 @@
  */
 
 int main() {
-    unsigned int a = 1, b = 2, c, count;
+    unsigned long long a = 1, b = 2, c;
+    int count;
 
-    printf("%u, %u, ", a, b);
+    printf("%llu, %llu, ", a, b);
 
     for (count = 2; count < 98; count++) {
         c = a + b;
-        printf("%u", c);
+        printf("%llu", c);
+
         if (count != 97) {
             printf(", ");
         }
+
         a = b;
         b = c;
     }
@@ -25,4 +28,3 @@ int main() {
     printf("\n");
     return 0;
 }
-
