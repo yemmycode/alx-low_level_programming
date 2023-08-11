@@ -3,12 +3,14 @@
 #include <stdlib.h>
 
 #define ERROR_MESSAGE "Error"
+#define MAX_DIGITS 10000
 
 /**
 * is_digit - Checks if a string consists only of digit characters
 * @s: String to be checked
 * Return: 1 if the string contains only digits, 0 otherwise
 */
+
 int is_digit(char *s)
 {
 while (*s)
@@ -28,6 +30,7 @@ return (1);
 void multiply(char *num1, char *num2)
 {
 int len1 = 0, len2 = 0, len, i, j;
+int result[MAX_DIGITS] = {0};
 
 while (num1[len1])
 len1++;
@@ -35,13 +38,6 @@ while (num2[len2])
 len2++;
 
 len = len1 + len2;
-int *result = calloc(len, sizeof(int));
-
-if (!result)
-{
-printf("%s\n", ERROR_MESSAGE);
-exit(98);
-}
 
 for (i = len1 - 1; i >= 0; i--)
 {
@@ -56,25 +52,34 @@ result[i + j + 1] %= 10;
 }
 }
 
+int a = 0;
 for (i = 0; i < len - 1 && result[i] == 0; i++)
 ;
 
 for (; i < len; i++)
-printf("%d", result[i]);
-printf("\n");
+{
+if (result[i])
+_putchar(result[i] + '0');
+if (a || i == len - 1)
+a = 1;
+}
 
-free(result);
+if (!a)
+_putchar('0');
+
+_putchar('\n');
 }
 
 int main(int argc, char *argv[])
 {
 if (argc != 3 || !is_digit(argv[1]) || !is_digit(argv[2]))
 {
-printf("%s\n", ERROR_MESSAGE);
-return (98);
+for (int i = 0; ERROR_MESSAGE[i]; i++)
+_putchar(ERROR_MESSAGE[i]);
+return 98;
 }
 
 multiply(argv[1], argv[2]);
 
-return (0);
+return 0;
 }
