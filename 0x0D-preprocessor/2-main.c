@@ -5,9 +5,15 @@ int main(void)
 {
 char *filename = (char *)__FILE__; 
 
-printf("%s\n", filename);
+FILE *file = fopen("output.txt", "w"); 
+
+if (file != NULL) 
+{
+fputs(filename, file); 
+fclose(file); 
+}
 
 free(filename);
 
-return 0;
+return (0);
 }
