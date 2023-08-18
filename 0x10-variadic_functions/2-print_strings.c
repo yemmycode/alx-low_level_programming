@@ -6,10 +6,10 @@
 * @n: The number of strings passed to the function.
 * ...: The strings to be printed.
 *
-* function prints the provided strings separated by the 
+* function prints the provided strings separated by the
 * specified separator.
 *
-* If separator is NULL, it won't be printed. If a string 
+* If separator is NULL, it won't be printed. If a string
 * is NULL, "(nil)" is printed.
 * A new line is printed at the end.
 */
