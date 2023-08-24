@@ -1,23 +1,9 @@
-section .data
-    hello db "Hello, Holberton", 10, 0  ; Null-terminated string with a newline character
-    format db "%s", 0                   ; The format specifier for printf
+Write a 64-bit program in assembly that prints Hello, Holberton, followed by a new line.
 
-section .text
-    global main
-    extern printf
-
-main:
-    ; Push arguments for printf onto the stack
-    push format
-    push hello
-
-    ; Call printf
-    call printf
-
-    ; Clean up the stack
-    add rsp, 16
-
-    ; Return 0 to comfirm successful execution
-    xor rdi, rdi
-    ret
-
+You are only allowed to use the printf function
+You are not allowed to use interrupts
+Your program will be compiled using nasm and gcc:
+julien@ubuntu:~/$ nasm -f elf64 101-hello_holberton.asm && gcc -no-pie -std=gnu89 101-hello_holberton.o -o hello
+julien@ubuntu:~/$ ./hello 
+Hello, Holberton
+julien@ubuntu:~/$ 
