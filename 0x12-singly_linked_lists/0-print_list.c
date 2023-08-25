@@ -3,13 +3,14 @@
 #include "lists.h"
 
 /**
-* print_list - Prints all elements in a list_t linked list.
-* @head: A pointer to the head of the list.
-* Return: The number of nodes in the list.
+* print_list function: Prints the elements of a linked list list_t.
+* @head: A pointer to the starting node of the list.
+* Return: The count of nodes in the list.
 */
 size_t print_list(const list_t *head)
 {
-size_t nodes = 0;
+size_t nodeCount = 0;
+
 
 while (head != NULL)
 {
@@ -18,9 +19,9 @@ printf("[0] (nil)\n");
 else
 printf("[%d] %s\n", head->len, head->str);
 
-nodes++;
+nodeCount++;
 head = head->next;
 }
 
-return (nodes);
+return (nodeCount);
 }
