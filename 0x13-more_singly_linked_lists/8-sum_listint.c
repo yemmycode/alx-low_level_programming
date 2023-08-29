@@ -3,9 +3,9 @@
 
 /**
 * sum_listint - Returns the sum of all the data (n) in a listint_t linked list.
-* @head: the pointer to the head node.
+* @head: Pointer to the head node.
 *
-* Return: the sum of all the data, or 0 if list is empty.
+* Return: the sum of all the data, or 0 if the list is empty.
 */
 int sum_listint(listint_t *head)
 {
@@ -13,7 +13,7 @@ int sum = 0;
 
 while (head)
 {
-sum += head->data;
+sum += head->n;
 head = head->next;
 }
 
