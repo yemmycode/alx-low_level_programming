@@ -13,7 +13,7 @@ size_t count = 0;
 const listint_t *slow, *fast, *loop;
 
 
-if (!headi)
+if (!head)
 return (0);
 
 
