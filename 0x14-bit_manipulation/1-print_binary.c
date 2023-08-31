@@ -18,13 +18,13 @@ while (mask > 0)
 {
 if (n & mask)
 {
-printf("1\n");
+printf("1");
 flag = 1;
 }
 else
 {
 if (flag)
-printf("0\n");
+printf("0");
 }
 
 mask = mask >> 1;
