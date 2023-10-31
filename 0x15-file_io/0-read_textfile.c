@@ -5,10 +5,10 @@
 
 /*
 * File: read_textfile.c
-* Description: function that  reads a text file and prints it to the standard output.
+* Description: function reads a text file and prints it to the standard output.
 * Parameters:
 * @filename: name of the file to be read.
-* @letters: The maximum number of letters to be read and printed.
+* @letters: maximum number of letters to be read and printed.
 * Return: The actual number of letters that were read and printed, or 0 on failure.
 */
 
