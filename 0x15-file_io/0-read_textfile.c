@@ -5,9 +5,9 @@
 
 /*
 * File: read_textfile.c
-* Description: This function reads a text file and prints it to the standard output.
+* Description: function that  reads a text file and prints it to the standard output.
 * Parameters:
-* @filename: The name of the file to be read.
+* @filename: name of the file to be read.
 * @letters: The maximum number of letters to be read and printed.
 * Return: The actual number of letters that were read and printed, or 0 on failure.
 */
